@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Produk Pilihan</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 12px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            color: #ee4d2d; /* Warna Oranye khas Shopee */
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .media-container {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* Rasio 1:1 (Persegi) */
+            background-color: #111;
+            overflow: hidden;
+        }
+
+        .media-container img,
+        .media-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: #222;
+        }
+
+        .btn-shopee {
+            background-color: #ee4d2d;
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-shopee:hover {
+            background-color: #d73a1e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Rekomendasi Produk Pilihan</h1>
+        <p>Klik pada gambar atau video untuk langsung melihat detail & membeli di Shopee!</p>
+    </div>
+
+    <div class="container">
+
+        <!-- KARTU PRODUK 1: Menggunakan GAMBAR -->
+        <a href="https://shope.ee/LINK_SHOPEE_1" target="_blank" class="card">
+            <div class="media-container">
+                <!-- Ganti produk1.jpg dengan nama file gambar Anda -->
+                <img src="produk1.jpg" alt="Nama Produk 1">
+            </div>
+            <div class="card-content">
+                <h2 class="product-title">Nama Produk 1 - Deskripsi Singkat Produk</h2>
+                <div class="btn-shopee">Beli di Shopee</div>
+            </div>
+        </a>
+
+        <!-- KARTU PRODUK 2: Menggunakan VIDEO PENDEK -->
+        <a href="https://shope.ee/LINK_SHOPEE_2" target="_blank" class="card">
+            <div class="media-container">
+                <!-- Ganti video1.mp4 dengan nama file video Anda -->
+                <video autoplay loop muted playsinline>
+                    <source src="video1.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video.
+                </video>
+            </div>
+            <div class="card-content">
+                <h2 class="product-title">Nama Produk 2 - Video Review Singkat</h2>
+                <div class="btn-shopee">Beli di Shopee</div>
+            </div>
+        </a>
+
+        <!-- KARTU PRODUK 3: Contoh Tambahan -->
+        <a href="https://s.shopee.co.id/1gIdVk3aTh" target="_blank" class="card">
+            <div class="media-container">
+                <img src="produk2.jpg" alt="Nama Produk 3">
+            </div>
+            <div class="card-content">
+                <h2 class="product-title">Nama Produk 3 - Rekomendasi Terlaris</h2>
+                <div class="btn-shopee">Beli di Shopee</div>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>
